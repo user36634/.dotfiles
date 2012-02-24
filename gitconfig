@@ -1,0 +1,36 @@
+[user]
+	name = Dondi
+	email = git@dondi.oib.com
+[github]
+    user = user36634
+[core]
+	excludesfile = ~/.gitignore
+	editor = "subl"
+	quotepath = false
+[branch]
+	autosetupmerge = true
+[push]
+	default = current
+[color]
+	diff = auto
+	branch = auto
+	status = auto
+	ui = true
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool "SourceTree"]
+	cmd = /Applications/Kaleidoscope.app/Contents/MacOS/ksdiff -w \"$LOCAL\" \"$REMOTE\"
+	path =
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
+	renames = true
+[mergetool]
+	keepBackup = true
+[difftool "sourcetree"]
+	cmd = /Applications/Kaleidoscope.app/Contents/MacOS/ksdiff -w \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

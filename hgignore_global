@@ -1,0 +1,15 @@
+syntax: glob
+
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*.o
+*.lo
+*.la
+*~
+.DS_Store
