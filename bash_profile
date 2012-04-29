@@ -64,6 +64,7 @@ alias cmdcount="history | awk '{print \$2}' | awk 'BEGIN {FS=\"|\"}{print \$1}' 
 alias rmdotds="find . -name '*.DS_Store' -type f -delete"
 alias rmpyc="find . -name '*.pyc' -type f -delete"
 alias tso="date '+Terminal Saved Output (%Y-%m-%d %H-%M-%S)'|pbcopy"
+alias ts="date '+%Y-%m-%d %H-%M-%S'|pbcopy && pbpaste"
 alias fixmongod="rm /data/db/mongod.lock && mongod --repair"
 
 shopt -s histappend
