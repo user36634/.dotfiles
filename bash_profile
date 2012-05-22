@@ -64,7 +64,10 @@ alias cmdcount="history | awk '{print \$2}' | awk 'BEGIN {FS=\"|\"}{print \$1}' 
 alias rmdotds="find . -name '*.DS_Store' -type f -delete"
 alias rmpyc="find . -name '*.pyc' -type f -delete"
 alias tso="date '+Terminal Saved Output (%Y-%m-%d %H-%M-%S)'|pbcopy"
-alias ts="date '+%Y-%m-%d %H-%M-%S'|pbcopy && pbpaste"
+alias dstamp="date '+%y%m%d'|pbcopy && pbpaste"
+alias tstamp="date '+%Y-%m-%d %H-%M-%S'|pbcopy && pbpaste"
+alias ddate="date '+%B %e, %Y'|sed 's/  / /;'|pbcopy && pbpaste" 
+alias ttime="date '+%H:%M %p'|sed 's/  / /;'|pbcopy && pbpaste"
 alias On="date '+%a, %b %_d, %Y at %_I:%M %p'|sed 's/  / /;'|pbcopy && pbpaste"
 alias fixmongod="rm /data/db/mongod.lock && mongod --repair"
 
