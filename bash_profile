@@ -1,13 +1,13 @@
 if [ -n "$PS1" ]; then
     if [ $TERM = 'xterm-color' -o $TERM = 'xterm-256color' ]; then
     	COLOR_DEFAULT="[00m"
-    	COLOR_OPTION0="[30m" # Black | Dark Gray
-    	COLOR_OPTION1="[31m" # Red | Light Red
-    	COLOR_OPTION2="[32m" # Green | Light Green
-    	COLOR_OPTION3="[33m" # Brown | Yellow
-    	COLOR_OPTION4="[34m" # Blue | Light Blue
-    	COLOR_OPTION5="[35m" # Purple | Light Purple
-    	COLOR_OPTION6="[36m" # Cyan | Light Cyan
+    	COLOR_OPTION0="[30m" # Black      | Dark Gray
+    	COLOR_OPTION1="[31m" # Red        | Light Red
+    	COLOR_OPTION2="[32m" # Green      | Light Green
+    	COLOR_OPTION3="[33m" # Brown      | Yellow
+    	COLOR_OPTION4="[34m" # Blue       | Light Blue
+    	COLOR_OPTION5="[35m" # Purple     | Light Purple
+    	COLOR_OPTION6="[36m" # Cyan       | Light Cyan
     	COLOR_OPTION7="[37m" # Light Gray | White
     	if [ `id -u` == '0' ]; then
     		COLOR_CHOICE=$COLOR_OPTION5
@@ -28,10 +28,6 @@ if [ -n "$PS1" ]; then
             . `brew --prefix`/etc/bash_completion
         fi
     fi
-    if [ -f $HOME/.rvm/scripts/rvm ]; then
-        [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-        rvm default
-    fi
 
 export EDITOR='subl -w'
 export VIRTUAL_ENV=""
@@ -49,8 +45,9 @@ ${BASEPROMPT}>"
 export PS2=" "
 
 alias ..="cd .."
-alias external-ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias local-ip="ipconfig getifaddr en1"
+alias ipext="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ipen0="ipconfig getifaddr en0"
+alias ipen1="ipconfig getifaddr en1"
 alias rvim="gvim --remote-silent"
 alias mysql=/usr/local/mysql/bin/mysql
 alias mysqladmin=/usr/local/mysql/bin/mysqladmin
@@ -66,7 +63,7 @@ alias rmpyc="find . -name '*.pyc' -type f -delete"
 alias tso="date '+Terminal Saved Output (%Y-%m-%d %H-%M-%S)'|pbcopy"
 alias dstamp="date '+%y%m%d'|pbcopy && pbpaste"
 alias tstamp="date '+%Y-%m-%d %H-%M-%S'|pbcopy && pbpaste"
-alias ddate="date '+%B %e, %Y'|sed 's/  / /;'|pbcopy && pbpaste" 
+alias ddate="date '+%B %e, %Y'|sed 's/  / /;'|pbcopy && pbpaste"
 alias ttime="date '+%H:%M %p'|sed 's/  / /;'|pbcopy && pbpaste"
 alias On="date '+%a, %b %_d, %Y at %_I:%M %p'|sed 's/  / /;'|pbcopy && pbpaste"
 alias fixmongod="rm /data/db/mongod.lock && mongod --repair"
