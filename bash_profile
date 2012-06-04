@@ -65,7 +65,7 @@ alias dstamp="date '+%y%m%d'|pbcopy && pbpaste"
 alias tstamp="date '+%Y-%m-%d %H-%M-%S'|pbcopy && pbpaste"
 alias ddate="date '+%B %e, %Y'|sed 's/  / /;'|pbcopy && pbpaste"
 alias ttime="date '+%H:%M %p'|sed 's/  / /;'|pbcopy && pbpaste"
-alias On="date '+%a, %b %_d, %Y at %_I:%M %p'|sed 's/  / /;'|pbcopy && pbpaste"
+alias On="date '+%a, %b %_d, %Y at %l:%M %p'|sed 's/  / /g;'|pbcopy && pbpaste"
 alias fixmongod="rm /data/db/mongod.lock && mongod --repair"
 
 shopt -s histappend
