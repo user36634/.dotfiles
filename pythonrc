@@ -2,7 +2,6 @@ import atexit
 import os
 import readline
 import sys
-import timeit
 
 history = os.path.expanduser('~/.python_history')
 
@@ -24,9 +23,6 @@ COLOR_OPTION5 = "[35m"  # Purple     | Light Purple
 COLOR_OPTION6 = "[36m"  # Cyan       | Light Cyan
 COLOR_OPTION7 = "[37m"  # Light Gray | White
 
-
-def t(*args):
-    return timeit.Timer(*args).timeit()
 
 if os.getenv('TERM') in ('xterm-color', 'xterm-256color'):
     sys.ps1 = '\n\001\033' + COLOR_OPTION2 + '\002> \001\033' + COLOR_DEFAULT + '\002'
