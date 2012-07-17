@@ -1,0 +1,33 @@
+import atexit
+import os
+import readline
+import sys
+import timeit
+
+history = os.path.expanduser('~/.python_history')
+
+try:
+    with open(history) as f:
+        readline.read_history_file(history)
+        readline.parse_and_bind('tab: complete')
+        atexit.register(readline.write_history_file, history)
+except IOError as e:
+    print 'No history file at ' + history + '.'
+
+COLOR_DEFAULT = "[00m"
+COLOR_OPTION0 = "[30m"  # Black      | Dark Gray
+COLOR_OPTION1 = "[31m"  # Red        | Light Red
+COLOR_OPTION2 = "[32m"  # Green      | Light Green
+COLOR_OPTION3 = "[33m"  # Brown      | Yellow
+COLOR_OPTION4 = "[34m"  # Blue       | Light Blue
+COLOR_OPTION5 = "[35m"  # Purple     | Light Purple
+COLOR_OPTION6 = "[36m"  # Cyan       | Light Cyan
+COLOR_OPTION7 = "[37m"  # Light Gray | White
+
+
+def t(*args):
+    return timeit.Timer(*args).timeit()
+
+if os.getenv('TERM') in ('xterm-color', 'xterm-256color'):
+    sys.ps1 = '\n\001\033' + COLOR_OPTION2 + '\002> \001\033' + COLOR_DEFAULT + '\002'
+    sys.ps2 = '  '

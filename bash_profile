@@ -30,19 +30,19 @@ if [ -n "$PS1" ]; then
     fi
 
 export EDITOR='subl -w'
+export PYTHONSTARTUP="$HOME/.pythonrc"
 export VIRTUAL_ENV=""
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export DISTRIBUTE_DISABLE_VERSIONED_EASY_INSTALL_SCRIPT=1
 export PIP_RESPECT_VIRTUALENV=true
-export BASEPROMPT=""
 export NODE_PATH="/usr/local/lib/node_modules"
 export LESS=FRSX
 export HISTSIZE=10000
 export HISTCONTROL=ignoreboth
 export HISTIGNORE="&:ls:[bf]g:exit"
 export PS1="
-${BASEPROMPT}>"
-export PS2=" "
+\[\e${COLOR_OPTION3}\]>\[\e${COLOR_DEFAULT}\] "
+export PS2="  "
 
 alias ..="cd .."
 alias ipext="dig +short myip.opendns.com @resolver1.opendns.com"
