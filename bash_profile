@@ -23,11 +23,11 @@ if [ -n "$PS1" ]; then
     	alias ls='ls --color=auto'
     	fi
     fi
-    if test -e /usr/local/bin/brew; then
-        if [ -f `brew --prefix`/etc/bash_completion ]; then
-            . `brew --prefix`/etc/bash_completion
-        fi
-    fi
+#    if test -e /usr/local/bin/brew; then
+#        if [ -f `brew --prefix`/etc/bash_completion ]; then
+#            . `brew --prefix`/etc/bash_completion
+#        fi
+#    fi
 
 # OS X PATH is set by:
 # 1. /private/etc/paths
