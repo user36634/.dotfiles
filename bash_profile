@@ -45,7 +45,7 @@ export NODE_PATH="/usr/local/lib/node_modules"
 export LESS=FRSX
 export HISTSIZE=10000
 export HISTCONTROL=ignoreboth
-export HISTIGNORE="&:ls:[bf]g:exit"
+export HISTIGNORE="&:ls:cd:[bf]g:brew *:tso:pwd:exit"
 export PS1="
 \[\e${COLOR_OPTION3}\]>\[\e${COLOR_DEFAULT}\] "
 export PS2="  "
