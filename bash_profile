@@ -29,6 +29,12 @@ if [ -n "$PS1" ]; then
         fi
     fi
 
+# OS X PATH is set by:
+# 1. /private/etc/paths
+# 2. /etc/paths.d/*
+# 3. /etc/profile
+# 4. export PATH="$PATH"
+export PATH="/usr/local/share/python:$PATH"
 export EDITOR='subl -w'
 export PYTHONSTARTUP="$HOME/.pythonrc"
 export VIRTUAL_ENV=""
