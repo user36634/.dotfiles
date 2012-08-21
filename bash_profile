@@ -45,15 +45,14 @@ export NODE_PATH="/usr/local/lib/node_modules"
 export LESS=FRSX
 export HISTSIZE=10000
 export HISTCONTROL=ignoreboth
-export HISTIGNORE="&:ls:cd:[bf]g:brew *:tso:pwd:exit"
+export HISTIGNORE="&:ls:cd:[bf]g:tso:pwd:exit"
 export PS1="
 \[\e${COLOR_OPTION3}\]>\[\e${COLOR_DEFAULT}\] "
 export PS2="  "
 
 alias ..="cd .."
 alias ipext="dig +short myip.opendns.com @resolver1.opendns.com"
-alias ipen0="ipconfig getifaddr en0"
-alias ipen1="ipconfig getifaddr en1"
+alias ip="ipconfig getifaddr $1"
 alias rvim="gvim --remote-silent"
 alias edit=$EDITOR
 alias qldebug='qlmanage -p "$@" >& /dev/null'
