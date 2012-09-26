@@ -9,7 +9,7 @@
 "   syntax reset
 "   endif
 "
-"   let g:colors_name = "IR_White"
+"   let g:colors_name = "ir_white"
 "
 "   hi Cursor  guifg=NONE guibg=#a7a7a7 gui=NONE
 "   hi Visual  guifg=NONE guibg=#e0e0ed gui=NONE
