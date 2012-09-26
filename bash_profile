@@ -45,7 +45,7 @@ export NODE_PATH="/usr/local/lib/node_modules"
 export LESS=FRSX
 export HISTSIZE=10000
 export HISTCONTROL=ignoreboth
-export HISTIGNORE="&:ls:cd:[bf]g:tso:pwd:exit"
+export HISTIGNORE="&:ls:cd:[bf]g:termo:pwd:exit"
 export PS1="
 \[\e${COLOR_OPTION3}\]>\[\e${COLOR_DEFAULT}\] "
 export PS2="  "
@@ -63,12 +63,12 @@ alias cdplone="cd /usr/local/zope/plone && pwd"
 alias cmdcount="history | awk '{print \$2}' | awk 'BEGIN {FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail | sort -nr"
 alias rmdotds="find . -name '*.DS_Store' -type f -delete"
 alias rmpyc="find . -name '*.pyc' -type f -delete"
-alias tso="date '+Terminal Saved Output (%Y-%m-%d %H-%M-%S)'|pbcopy"
-alias dstamp="date '+%y%m%d'|pbcopy && pbpaste"
-alias tstamp="date '+%Y-%m-%d %H-%M-%S'|pbcopy && pbpaste"
-alias ddate="date '+%B %e, %Y'|sed 's/  / /;'|pbcopy && pbpaste"
-alias ttime="date '+%H:%M %p'|sed 's/  / /;'|pbcopy && pbpaste"
-alias On="date '+%a, %b %_d, %Y at %l:%M %p'|sed 's/  / /g;'|pbcopy && pbpaste"
+alias termo="date '+Terminal Saved Output (%Y-%m-%d %H-%M-%S)'.txt | pbcopy && pbpaste"
+alias dstamp="date '+%y%m%d' | pbcopy && pbpaste"
+alias tstamp="date '+%Y-%m-%d %H-%M-%S' | pbcopy && pbpaste"
+alias ddate="date '+%B %e, %Y' | sed 's/  / /;' | pbcopy && pbpaste"
+alias ttime="date '+%H:%M %p' | sed 's/  / /;' | pbcopy && pbpaste"
+alias On="date '+%a, %b %_d, %Y at %l:%M %p' | sed 's/  / /g;' | pbcopy && pbpaste"
 alias fixmongod="rm /data/db/mongod.lock && mongod --repair"
 
 shopt -s histappend
