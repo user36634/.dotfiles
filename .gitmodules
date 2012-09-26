@@ -1,6 +1,9 @@
-[submodule "vim/bundle/vim-colors-solarized"]
-	path = vim/bundle/vim-colors-solarized
+[submodule "vim/bundle/solarized"]
+	path = vim/bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule "vim/bundle/zencoding-vim"]
-	path = vim/bundle/zencoding-vim
+[submodule "vim/bundle/zencoding"]
+	path = vim/bundle/zencoding
 	url = git://github.com/mattn/zencoding-vim.git
+[submodule "vim/bundle/csscomb"]
+    path = vim/bundle/csscomb
+    url = git://github.com/miripiruni/CSScomb-for-Vim.git
