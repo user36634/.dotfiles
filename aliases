@@ -1,0 +1,22 @@
+alias ..="cd .."
+alias ipext="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ip="ipconfig getifaddr $1"
+alias rvim="gvim --remote-silent"
+alias edit=$EDITOR
+alias qldebug='qlmanage -p "$@" >& /dev/null'
+alias wifidiag='open "/System/Library/CoreServices/Wi-Fi Diagnostics.app"'
+alias go2dotfiles="cd $HOME/.dotfiles && echo -en '' && pwd"
+alias go2src="cd /usr/local/src && echo -en '' && pwd"
+alias go2sites="cd /usr/local/sites && echo -en '' && pwd"
+alias go2plone="cd /usr/local/zope/plone && echo -en '' && pwd"
+alias go2sublpack="cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages && echo -en '' && pwd"
+alias cmdcount="history | awk '{print \$2}' | awk 'BEGIN {FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail | sort -nr"
+alias rmdotds="find . -name '*.DS_Store' -type f -delete"
+alias rmpyc="find . -name '*.pyc' -type f -delete"
+alias termo="date '+Terminal Saved Output (%Y-%m-%d %H-%M-%S)'.txt | pbcopy && pbpaste"
+alias dstamp="date '+%y%m%d' | pbcopy && pbpaste"
+alias tstamp="date '+%Y-%m-%d %H-%M-%S' | pbcopy && pbpaste"
+alias ddate="date '+%B %e, %Y' | sed 's/  / /;' | pbcopy && pbpaste"
+alias ttime="date '+%H:%M %p' | sed 's/  / /;' | pbcopy && pbpaste"
+alias On="date '+%a, %b %_d, %Y at %l:%M %p' | sed 's/  / /g;' | pbcopy && pbpaste"
+alias fixmongod="rm /data/db/mongod.lock && mongod --repair"
