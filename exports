@@ -15,5 +15,6 @@ export LESS=FRSX
 export HISTSIZE=10000
 export HISTCONTROL=ignoreboth
 export HISTIGNORE="&:ls:cd:[bf]g:termo:pwd:exit"
-export PS1="\n\[\e${COLOR_OPTION3}\]>\[\e${COLOR_DEFAULT}\] "
+# export PS1="\n\[\e${COLOR_OPTION3}\]>\[\e${COLOR_DEFAULT}\] "
+export PS1="\n> "
 export PS2="  "
