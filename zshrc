@@ -1,5 +1,8 @@
+if [ -x /usr/libexec/path_helper ]; then
+    eval `/usr/libexec/path_helper -s`
+fi
+
 autoload -U colors && colors
-autoload -U compinit && compinit
 autoload -U promptinit && promptinit
 
 HISTFILE=$HOME/.zsh_history
@@ -40,3 +43,10 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+autoload -U compinit
+if [ -f $HOME/.zcompdump ]; then
+    rm -f ~/.zcompdump
+fi
+compinit
+
