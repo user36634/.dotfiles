@@ -3,7 +3,7 @@
 # 2. /etc/paths.d/*
 # 3. /etc/profile
 # 4. export PATH="$PATH"
-export PATH="/usr/local/share/python:$PATH"
+export PATH="/usr/local/share/python:/usr/local/rvm/bin:$PATH"
 export EDITOR='subl -w'
 export PYTHONSTARTUP="$HOME/.pythonrc"
 export VIRTUAL_ENV=""
