@@ -48,5 +48,5 @@ autoload -U compinit
 if [ -f $HOME/.zcompdump ]; then
     rm -f ~/.zcompdump
 fi
-compinit
+compinit -u
 
