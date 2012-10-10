@@ -402,3 +402,5 @@
 #        killall "$app" > /dev/null 2>&1
 #        done
 #        echo "Done. Note that some of these changes require a logout/restart to take effect."
+
+# /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
