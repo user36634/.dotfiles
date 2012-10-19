@@ -14,7 +14,12 @@ alias cmdcount="history|awk '{print \$2}'|awk 'BEGIN {FS=\"|\"}{print \$1}'|sort
 alias rmdotds="find . -name '*.DS_Store' -type f -delete"
 alias rmpyc="find . -name '*.pyc' -type f -delete"
 alias termx="date '+Terminal Saved Output (%Y-%m-%d %H-%M-%S)'.txt|pbcopy && pbpaste"
-alias termo="termx|sed 's/ $//'|pbcopy && pbpaste && cliclick c:160,12 m:160,245 kp:return w:1000 && cliclick c:200,12 m:260,120 kp:return w:1000"
+if [ -f /usr/local/bin/cliclick ]; then
+    alias termo="termx|sed 's/ $//'|pbcopy && pbpaste && cliclick c:160,12 m:160,245 kp:return w:1000 && cliclick c:200,12 m:260,120 kp:return w:1000"
+fi
+if [ -f /usr/bin/osascript ]; then
+  alias termo="osascript ~/.dotfiles/bin/termo.scpt"
+fi
 alias trimws="find . -not \( -name .svn -prune -o -name .git -prune \) -type f -print0 | xargs -0 sed -i '' -E 's/[[:space:]]*$//'"
 alias dstamp="date '+%y%m%d'|pbcopy && pbpaste"
 alias tstamp="date '+%Y-%m-%d %H-%M-%S'|pbcopy && pbpaste"
