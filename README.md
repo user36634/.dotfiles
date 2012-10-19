@@ -26,7 +26,7 @@ brew install ruby
 ### Installation
 
 ```bash
-cd && git clone https://github.com/user36634/.dotfiles.git && cd .dotfiles && ./install.rb
+cd && git clone https://github.com/user36634/.dotfiles.git && cd ~/.dotfiles && ./bin/install.rb
 ```
 
 ## Credits
