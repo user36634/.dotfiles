@@ -30,3 +30,4 @@ alias ddate="date '+%B %e, %Y'|sed 's/  / /;'|pbcopy && pbpaste"
 alias ttime="date '+%H:%M %p'|sed 's/  / /;'|pbcopy && pbpaste"
 alias On="date '+%a, %b %_d, %Y at %l:%M %p'|sed 's/  / /g;'|pbcopy && pbpaste"
 alias fixmongod="rm /data/db/mongod.lock && mongod --repair"
+alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
