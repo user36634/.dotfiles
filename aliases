@@ -5,11 +5,14 @@ alias rvim="gvim --remote-silent"
 alias edit=$EDITOR
 alias qldebug='qlmanage -p "$@" >& /dev/null'
 alias wifidiag='open "/System/Library/CoreServices/Wi-Fi Diagnostics.app"'
+alias go2docroot="cd /var/www/html && echo -en '' && pwd"
 alias go2dotfiles="cd $HOME/.dotfiles && echo -en '' && pwd"
 alias go2src="cd /usr/local/src && echo -en '' && pwd"
 alias go2sites="cd /usr/local/sites && echo -en '' && pwd"
 alias go2plone="cd /usr/local/zope/plone && echo -en '' && pwd"
 alias go2sublpack="cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages && echo -en '' && pwd"
+alias go2drupal="cd /var/www/drupal/public_html && echo -en '' && pwd"
+alias go2theme="cd /var/www/drupal/public_html/sites/all/themes/sjsu && echo -en '' && pwd"
 alias cmdcount="history|awk '{print \$2}'|awk 'BEGIN {FS=\"|\"}{print \$1}'|sort|uniq -c|sort -n|tail|sort -nr"
 alias rmdotds="find . -name '*.DS_Store' -type f -delete"
 alias rmpyc="find . -name '*.pyc' -type f -delete"
