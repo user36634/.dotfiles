@@ -5,7 +5,7 @@
     user = user36634
 [core]
 	excludesfile = ~/.gitignore
-	editor = "subl"
+	editor = "vim"
 	quotepath = false
 [branch]
 	autosetupmerge = true
