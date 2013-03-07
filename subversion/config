@@ -47,7 +47,7 @@
 ###   This will override the compile-time default, which is to use
 ###   Subversion's internal diff implementation.
 # diff-cmd = diff_program (diff, gdiff, etc.)
-diff-cmd = ksdiff-svnwrapper
+diff-cmd = ksdiff
 ### Set diff3-cmd to the absolute path of your 'diff3' program.
 ###   This will override the compile-time default, which is to use
 ###   Subversion's internal diff3 implementation.
@@ -59,6 +59,7 @@ diff-cmd = ksdiff-svnwrapper
 ### merging tool of choice. Subversion will pass 4 arguments to
 ### the specified command: base theirs mine merged
 # merge-tool-cmd = merge_command
+merge-tool-cmd = ksdiff
 
 ### Section for configuring tunnel agents.
 [tunnels]

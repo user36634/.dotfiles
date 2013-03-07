@@ -40,4 +40,12 @@ power() {
         $0 ~ "CurrentCapacity" {b=$5;nextfile}
         END{printf("%.2f%%", b/a * 100)}'
 }
+
+function setenv() {
+    if [ $# = 2 ]; then
+        export $1=$2;
+    else
+        echo "Usage: setenv [NAME] [VALUE]";
+        fi
+}
 fi
