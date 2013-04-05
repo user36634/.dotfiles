@@ -25,10 +25,10 @@ if [ -f /usr/bin/osascript ]; then
   alias termo="osascript ~/.dotfiles/bin/termo.scpt"
 fi
 alias trimws="find . -not \( -name .svn -prune -o -name .git -prune \) -type f -print0 | xargs -0 sed -i '' -E 's/[[:space:]]*$//'"
-alias dstamp="date '+%y%m%d'|pbcopy && pbpaste"
+alias dstamp="date '+%Y-%m-%d'|pbcopy && pbpaste"
 alias tstamp="date '+%Y-%m-%d %H-%M-%S'|pbcopy && pbpaste"
 alias ddate="date '+%B %e, %Y'|sed 's/  / /;'|pbcopy && pbpaste"
 alias ttime="date '+%H:%M %p'|sed 's/  / /;'|pbcopy && pbpaste"
 alias On="date '+%a, %b %_d, %Y at %l:%M %p'|sed 's/  / /g;'|pbcopy && pbpaste"
 alias fixmongod="rm /data/db/mongod.lock && mongod --repair"
-alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
+alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user; killall Finder;echo "Open With has been rebuilt, Finder will relaunch'
