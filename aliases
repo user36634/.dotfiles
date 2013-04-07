@@ -14,6 +14,7 @@ alias go2sublpack="cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages &
 alias go2decafsug="cd ~/Library/Application\ Support/Espresso/Sugars && echo -en '' && pwd"
 alias go2drupal="cd /var/www/drupal/public_html && echo -en '' && pwd"
 alias go2theme="cd /var/www/drupal/public_html/sites/all/themes/sjsu && echo -en '' && pwd"
+alias bedrupal="sudo -u drupal"
 alias cmdcount="history|awk '{print \$2}'|awk 'BEGIN {FS=\"|\"}{print \$1}'|sort|uniq -c|sort -n|tail|sort -nr"
 alias rmdotds="find . -name '*.DS_Store' -type f -delete"
 alias rmpyc="find . -name '*.pyc' -type f -delete"
