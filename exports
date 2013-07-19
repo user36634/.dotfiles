@@ -3,14 +3,13 @@
 # 2. /etc/paths.d/*
 # 3. /etc/profile
 # 4. export PATH="$PATH"
-export PATH="/usr/local/share/python:/usr/local/rvm/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 export EDITOR='subl -w'
 export PYTHONSTARTUP="$HOME/.pythonrc"
 export VIRTUAL_ENV=""
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export DISTRIBUTE_DISABLE_VERSIONED_EASY_INSTALL_SCRIPT=1
 export PIP_RESPECT_VIRTUALENV=true
-export NODE_PATH="/usr/local/lib/node_modules"
 export LESS=FRSX
 export HISTSIZE=10000
 export HISTCONTROL=ignoreboth
