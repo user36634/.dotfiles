@@ -50,3 +50,5 @@ if [ -f $HOME/.zcompdump ]; then
 fi
 compinit -u
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - zsh)"

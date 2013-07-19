@@ -49,3 +49,6 @@ function setenv() {
         fi
 }
 fi
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
