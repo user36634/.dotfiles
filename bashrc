@@ -1,3 +1,18 @@
+function power() {
+    /usr/sbin/ioreg -l | awk 'BEGIN{a=0;b=0}
+        $0 ~ "MaxCapacity" {a=$5;next}
+        $0 ~ "CurrentCapacity" {b=$5;nextfile}
+        END{printf("%.2f%%", b/a * 100)}';
+}
+
+function setenv() {
+    if [ $# = 2 ]; then
+        export $1=$2;
+    else
+        echo "Usage: setenv [NAME] [VALUE]";
+    fi
+}
+
 if [ -n "$PS1" ]; then
     if [ $TERM = 'xterm-color' -o $TERM = 'xterm-256color' ]; then
     	COLOR_DEFAULT="[00m"
@@ -23,32 +38,18 @@ if [ -n "$PS1" ]; then
     	alias ls='ls --color=auto'
     	fi
     fi
-
-if [ -f ~/.exports ]; then
-    source ~/.exports
 fi
 
-if [ -f ~/.aliases ]; then
-    source ~/.aliases
+if [ -f "$HOME/.exports" ]; then
+    source "$HOME/.exports"
+fi
+
+if [ -f "$HOME/.aliases" ]; then
+    source "$HOME/.aliases"
 fi
 
 shopt -s histappend
 
-power() {
-    /usr/sbin/ioreg -l | awk 'BEGIN{a=0;b=0}
-        $0 ~ "MaxCapacity" {a=$5;next}
-        $0 ~ "CurrentCapacity" {b=$5;nextfile}
-        END{printf("%.2f%%", b/a * 100)}'
-}
-
-function setenv() {
-    if [ $# = 2 ]; then
-        export $1=$2;
-    else
-        echo "Usage: setenv [NAME] [VALUE]";
-        fi
-}
-fi
-
 export PATH="$HOME/.rbenv/bin:$PATH"
+
 eval "$(rbenv init -)"
