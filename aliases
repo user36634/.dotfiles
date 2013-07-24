@@ -1,35 +1,36 @@
 alias ..="cd .."
-alias ipext="dig +short myip.opendns.com @resolver1.opendns.com"
-alias ip="ipconfig getifaddr $1"
-alias rvim="gvim --remote-silent"
-alias edit=$EDITOR
-alias qldebug='qlmanage -p "$@" >& /dev/null'
-alias wifidiag='open "/System/Library/CoreServices/Wi-Fi Diagnostics.app"'
-alias go2docroot="cd /var/www/html && echo -en '' && pwd"
-alias go2dotfiles="cd $HOME/.dotfiles && echo -en '' && pwd"
-alias go2src="cd /usr/local/src && echo -en '' && pwd"
-alias go2sites="cd /usr/local/sites && echo -en '' && pwd"
-alias go2plone="cd /usr/local/zope/plone && echo -en '' && pwd"
-alias go2sublpack="cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages && echo -en '' && pwd"
-alias go2decafsug="cd ~/Library/Application\ Support/Espresso/Sugars && echo -en '' && pwd"
-alias go2drupal="cd /var/www/drupal/public_html && echo -en '' && pwd"
-alias go2theme="cd /var/www/drupal/public_html/sites/all/themes/sjsu && echo -en '' && pwd"
+alias On="date '+%a, %b %_d, %Y at %l:%M %p'|sed 's/  / /g;'|pbcopy && pbpaste"
 alias bedrupal="sudo -u drupal"
 alias cmdcount="history|awk '{print \$2}'|awk 'BEGIN {FS=\"|\"}{print \$1}'|sort|uniq -c|sort -n|tail|sort -nr"
+alias ddate="date '+%B %e, %Y'|sed 's/  / /;'|pbcopy && pbpaste"
+alias dstamp="date '+%Y-%m-%d'|pbcopy && pbpaste"
+alias edit=$EDITOR
+alias fixmongod="rm /data/db/mongod.lock && mongod --repair"
+alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user; killall Finder;echo "Open contextual menu has been fixed, Finder should relaunch"'
+alias go2decafsug="cd ~/Library/Application\ Support/Espresso/Sugars && echo -en '' && pwd"
+alias go2docroot="cd /var/www/html && echo -en '' && pwd"
+alias go2dotfiles="cd $HOME/.dotfiles && echo -en '' && pwd"
+alias go2drupal="cd /var/www/drupal/public_html && echo -en '' && pwd"
+alias go2plone="cd /usr/local/zope/plone && echo -en '' && pwd"
+alias go2sites="cd /usr/local/sites && echo -en '' && pwd"
+alias go2sjsutheme="cd /var/www/drupal/public_html/sites/all/themes/sjsu && echo -en '' && pwd"
+alias go2src="cd /usr/local/src && echo -en '' && pwd"
+alias go2sublpack="cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages && echo -en '' && pwd"
+alias ip="ipconfig getifaddr $1"
+alias ipext="dig +short myip.opendns.com @resolver1.opendns.com"
+alias qldebug='qlmanage -p "$@" >& /dev/null'
 alias rmdotds="find . -name '*.DS_Store' -type f -delete"
 alias rmpyc="find . -name '*.pyc' -type f -delete"
+alias rvim="gvim --remote-silent"
+alias sjsuthemechecks="cd /var/www/drupal/public_html/sites/all/themes/sjsu/assets/less && ./check-1.sh && ./check-2.sh && ./check-3.sh"
 alias termx="date '+Terminal Saved Output (%Y-%m-%d %H-%M-%S)'.txt|pbcopy && pbpaste"
+alias trimws="find . -not \( -name .svn -prune -o -name .git -prune \) -type f -print0 | xargs -0 sed -i '' -E 's/[[:space:]]*$//'"
+alias tstamp="date '+%Y-%m-%d %H-%M-%S'|pbcopy && pbpaste"
+alias ttime="date '+%H:%M %p'|sed 's/  / /;'|pbcopy && pbpaste"
+alias wifidiag='open "/System/Library/CoreServices/Wi-Fi Diagnostics.app"'
 if [ -f /usr/local/bin/cliclick ]; then
     alias termo="termx|sed 's/ $//'|pbcopy && pbpaste && cliclick c:160,12 m:160,245 kp:return w:1000 && cliclick c:200,12 m:260,120 kp:return w:1000"
 fi
 if [ -f /usr/bin/osascript ]; then
   alias termo="osascript ~/.dotfiles/bin/termo.scpt"
 fi
-alias trimws="find . -not \( -name .svn -prune -o -name .git -prune \) -type f -print0 | xargs -0 sed -i '' -E 's/[[:space:]]*$//'"
-alias dstamp="date '+%Y-%m-%d'|pbcopy && pbpaste"
-alias tstamp="date '+%Y-%m-%d %H-%M-%S'|pbcopy && pbpaste"
-alias ddate="date '+%B %e, %Y'|sed 's/  / /;'|pbcopy && pbpaste"
-alias ttime="date '+%H:%M %p'|sed 's/  / /;'|pbcopy && pbpaste"
-alias On="date '+%a, %b %_d, %Y at %l:%M %p'|sed 's/  / /g;'|pbcopy && pbpaste"
-alias fixmongod="rm /data/db/mongod.lock && mongod --repair"
-alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user; killall Finder;echo "Open contextual menu has been fixed, Finder should relaunch"'
