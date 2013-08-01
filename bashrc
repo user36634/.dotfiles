@@ -56,7 +56,7 @@ if [ -f "$HOME/.exports" ]; then
 fi
 
 # Set rbenv if exists
-if ! [ command -v rbenv 1>/dev/null 2>&1 ]; then
+if ! x="$(type -p "rbenv")" || [ -z "x" ]; then
     eval "$(rbenv init -)"
 fi
 
