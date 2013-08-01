@@ -73,16 +73,6 @@ if has("autocmd")
   au BufNewFile,BufRead *.less set filetype=less
 endif
 
-" Sparkup
-" Location of the sparkup executable.
-let g:sparkup='/usr/local/bin/sparkup'
-" Additional args passed to sparkup.
-let g:sparkupArgs='--no-last-newline'
-" Mapping used to execute sparkup.
-let g:sparkupExecuteMapping='<c-e>'
-" Mapping used for next sparkup
-let g:sparkupNextMapping='<c-n>'
-
 " Maps
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
