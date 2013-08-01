@@ -9,7 +9,7 @@ set guicursor=n-v-c:block-cursor-blinkon0
 set guicursor+=i:hor2-cursor-blinkwait500-blinkon500-blinkoff500
 set transparency=2
 set backupcopy=yes
-set background=light
+set background=dark
 colorscheme solarized
 call togglebg#map("<F5>")
 " set fullscreen=1
