@@ -40,7 +40,7 @@ export CLICOLOR=true
 export GREP_COLOR='1;33'
 
 # Set rbenv if exists
-if ! x="$(type -p "rbenv")" || [ -z "x" ]; then
+if which rbenv &> /dev/null; then
     eval "$(rbenv init - zsh)"
 fi
 

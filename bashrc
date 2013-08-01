@@ -56,8 +56,8 @@ if [ -f "$HOME/.exports" ]; then
 fi
 
 # Set rbenv if exists
-if ! x="$(type -p "rbenv")" || [ -z "x" ]; then
-    eval "$(rbenv init -)"
+if which rbenv &> /dev/null; then
+    eval "$(rbenv init - )"
 fi
 
 shopt -s histappend
