@@ -37,3 +37,7 @@ fi
 if [ -f /usr/bin/osascript ]; then
   alias termo="osascript ~/.dotfiles/bin/termo.scpt"
 fi
+if [ -f $HOME/.ssh/config ]; then
+  alias knownhosts="cat ~/.ssh/config| grep \"Host \""
+fi
+
