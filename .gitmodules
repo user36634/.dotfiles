@@ -16,3 +16,6 @@
 [submodule "vim/bundle/drupal"]
 	path = vim/bundle/drupal
 	url = http://git.drupal.org/project/vimrc.git
+[submodule "vim/bundle/editorconfig"]
+	path = vim/bundle/editorconfig
+	url = https://github.com/editorconfig/editorconfig-vim.git
