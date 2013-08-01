@@ -1,3 +1,7 @@
+function tabname {
+    printf "\e]1;$1\a"
+}
+
 autoload -U colors && colors
 autoload -U promptinit && promptinit
 autoload -U compinit && compinit -u
@@ -6,14 +10,17 @@ HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000
 SAVEHIST=10000
 
+# No zcompdump
 if [ -f "$HOME/.zcompdump" ]; then
     rm -f "$HOME/.zcompdump"
 fi
 
+# Set aliases if available
 if [ -f "$HOME/.aliases" ]; then
     source "$HOME/.aliases"
 fi
 
+# Set exports if available
 if [ -f "$HOME/.exports" ]; then
     source "$HOME/.exports"
 fi
@@ -32,6 +39,11 @@ export PROMPT=$'\n# '
 export CLICOLOR=true
 export GREP_COLOR='1;33'
 
+# Set rbenv if exists
+if [ command -v rbenv 1>/dev/null 2>&1 ]; then
+    eval "$(rbenv init - zsh)"
+fi
+
 PROMPT=$'\n%{[01;31m%}>%{[00m%} '
 #PROMPT2=$'\n%{[01;31m%}%_>%{[00m%} '
 #PROMPT3=$'\n%{[01;31m%}?#%{[00m%} '
@@ -45,7 +57,3 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 
 fpath=(/usr/local/share/zsh-completions $fpath)
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-
-eval "$(rbenv init - zsh)"

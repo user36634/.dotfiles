@@ -13,6 +13,11 @@ function setenv() {
     fi
 }
 
+function tabname {
+    printf "\e]1;$1\a"
+}
+
+# Fun with color
 if [ -n "$PS1" ]; then
     if [ $TERM = 'xterm-color' -o $TERM = 'xterm-256color' ]; then
     	COLOR_DEFAULT="[00m"
@@ -40,16 +45,19 @@ if [ -n "$PS1" ]; then
     fi
 fi
 
-if [ -f "$HOME/.exports" ]; then
-    source "$HOME/.exports"
-fi
-
+# Set aliases if available
 if [ -f "$HOME/.aliases" ]; then
     source "$HOME/.aliases"
 fi
 
+# Set exports if available
+if [ -f "$HOME/.exports" ]; then
+    source "$HOME/.exports"
+fi
+
+# Set rbenv if exists
+if ! [ command -v rbenv 1>/dev/null 2>&1 ]; then
+    eval "$(rbenv init -)"
+fi
+
 shopt -s histappend
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-
-eval "$(rbenv init -)"
