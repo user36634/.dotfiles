@@ -30,6 +30,30 @@ alias termx="date '+Terminal Saved Output (%Y-%m-%d %H-%M-%S)'.txt|pbcopy && pbp
 alias trimws="find . -not \( -name .svn -prune -o -name .git -prune \) -type f -print0 | xargs -0 sed -i '' -E 's/[[:space:]]*$//'"
 alias tstamp="date '+%Y-%m-%d %H-%M-%S'|pbcopy && pbpaste"
 alias ttime="date '+%H:%M %p'|sed 's/  / /;'|pbcopy && pbpaste"
+alias update_sublpack="go2sublpack && \
+find . -name '.git' -print && \
+echo 'Alignment' && cd 'Alignment' && git pull && \
+echo 'Autoprefixer' && cd '../Autoprefixer' && git pull && \
+echo 'CoffeeScript' && cd '../CoffeeScript' && git pull && \
+echo 'ColorPicker' && cd '../ColorPicker' && git pull && \
+echo 'Creole' && cd '../Creole' && git pull && \
+echo 'CSS3' && cd '../CSS3' && git pull && \
+echo 'CSScomb' && cd '../CSScomb' && git pull && \
+echo 'Dotfiles' && cd '../Dotfiles' && git pull && \
+echo 'EditorConfig' && cd '../EditorConfig' && git pull && \
+echo 'Emmet' && cd '../Emmet' && git pull && \
+echo 'Hayaku' && cd '../Hayaku' && git pull && \
+echo 'HTML5' && cd '../HTML5' && git pull && \
+echo 'HyperlinkHelper' && cd '../HyperlinkHelper' && git pull && \
+echo 'LESS' && cd '../LESS' && git pull && \
+echo 'Prefixr' && cd '../Prefixr' && git pull && \
+echo 'Recessify' && cd '../Recessify' && git pull && \
+echo 'SCSS' && cd '../SCSS' && git pull && \
+echo 'SideBarEnhancements' && cd '../SideBarEnhancements' && git pull && \
+echo 'Theme - Soda' && cd '../Theme - Soda' && git pull && \
+echo 'TrailingSpaces' && cd '../TrailingSpaces' && git pull && \
+echo 'Whitespace' && cd '../Whitespace' && git pull && \
+go2sublpack"
 alias wifidiag='open "/System/Library/CoreServices/Wi-Fi Diagnostics.app"'
 if [ -f /usr/local/bin/cliclick ]; then
     alias termo="termx|sed 's/ $//'|pbcopy && pbpaste && cliclick c:160,12 m:160,245 kp:return w:1000 && cliclick c:200,12 m:260,120 kp:return w:1000"
