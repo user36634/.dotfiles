@@ -44,11 +44,14 @@ if which rbenv &> /dev/null; then
     eval "$(rbenv init - zsh)"
 fi
 
+# Prompt
 PROMPT=$'\n%{[01;31m%}>%{[00m%} '
 #PROMPT2=$'\n%{[01;31m%}%_>%{[00m%} '
 #PROMPT3=$'\n%{[01;31m%}?#%{[00m%} '
 #PROMPT4=$'\n%{[01;31m%}+%N:%i>%{[00m%} '
+
 PSVAR='>:%:#'
+
 SPROMPT='%{[01;35m%}CORRECT>%{[01;37m%}%r%{[01;35m%}(ynea)%{[31;33m%}?%{[00m%} '
 
 setopt EXTENDED_HISTORY

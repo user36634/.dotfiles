@@ -55,6 +55,9 @@ if [ -f "$HOME/.exports" ]; then
     source "$HOME/.exports"
 fi
 
+# Prompt
+export PS1="\n\[\e${COLOR_OPTION3}\]>\[\e${COLOR_DEFAULT}\] "
+
 # Set rbenv if exists
 if which rbenv &> /dev/null; then
     eval "$(rbenv init - )"
