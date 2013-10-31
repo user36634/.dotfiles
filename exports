@@ -4,7 +4,8 @@
 # 3. /etc/profile
 # 4. export PATH="$PATH"
 export PATH="/usr/local/bin:$PATH"
-export EDITOR='subl -w'
+export EDITOR='mvim'
+export VISUAL='mvim'
 export PYTHONSTARTUP="$HOME/.pythonrc"
 export VIRTUAL_ENV=""
 export VIRTUAL_ENV_DISABLE_PROMPT=1
