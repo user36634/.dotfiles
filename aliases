@@ -32,6 +32,7 @@ alias termx="date '+Terminal Saved Output (%Y-%m-%d %H-%M-%S)'.txt|pbcopy && pbp
 alias trimws="find . -not \( -name .svn -prune -o -name .git -prune \) -type f -print0 | xargs -0 sed -i '' -E 's/[[:space:]]*$//'"
 alias tstamp="date '+%Y-%m-%d %H-%M-%S'|pbcopy && pbpaste"
 alias ttime="date '+%H:%M %p'|sed 's/  / /;'|pbcopy && pbpaste"
+alias update_npm="cd /usr/local/lib/node_modules && npm -g update"
 alias update_sublpack="go2sublpack && \
 find . -name '.git' -print && \
 echo 'Alignment' && cd 'Alignment' && git pull && \
